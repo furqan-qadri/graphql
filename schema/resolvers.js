@@ -16,7 +16,11 @@ const resolvers = {
         return MovieList;
     },
 
-      movie:()=>{}
+    movie: (parent,args) =>{
+        const name= args.name;
+        const movie=_.find(MovieList, { name });
+        return movie;
+    },
   },
 };
 

@@ -96,7 +96,7 @@ const MovieList=[
   {
     id:2,
     name:"Ali",
-    year:2004,
+    year:1994,
     isInTheaters: true
   },
   {
