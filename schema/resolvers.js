@@ -41,8 +41,20 @@ const resolvers = {
             UserList.push(user);
             return user;
 
-        }
-    }
+        },
+
+        updateUsername: (parent,args) => {
+            const {id, newUsername}= args.input;
+            let userUpdated;
+            UserList.forEach((user)=> {
+                if (user.id=== Number(id)){
+                    user.username=newUsername;
+                    userUpdated=user
+                }
+            });
+            return userUpdated;
+        },
+    },
   };
 
 module.exports ={resolvers}
