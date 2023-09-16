@@ -1,4 +1,4 @@
-const { UserList } = require("../fakeData");
+const { UserList , MovieList} = require("../fakeData");
 const _ = require ("lodash");
 
 const resolvers = {
@@ -11,6 +11,12 @@ const resolvers = {
         const user=_.find(UserList, {id: Number(id)});
         return user;
     },
+    //all movies
+    movies:() => {
+        return MovieList;
+    },
+
+      movie:()=>{}
   },
 };
 

@@ -86,4 +86,31 @@ const UserList = [
 //    AUSTRALIA
 // }
 
-module.exports={UserList};
+const MovieList=[
+  {
+    id:1,
+    name:"Interstellar",
+    year:2014,
+    isInTheaters: true
+  },
+  {
+    id:2,
+    name:"Ali",
+    year:2004,
+    isInTheaters: true
+  },
+  {
+    id:3,
+    name:"The American",
+    year:2007,
+    isInTheaters: true
+  },
+  {
+    id:4,
+    name:"Henry",
+    year:2034,
+    isInTheaters: false
+  },
+]
+
+module.exports={UserList, MovieList};
