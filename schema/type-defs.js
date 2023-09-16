@@ -26,6 +26,16 @@ const typeDefs = gql`
 
   }
 
+  input CreateUserInput{
+    name: String!
+    username: String!
+    age: Int!
+    nationality: Nationality=BRAZIL
+  }
+
+  type Mutation{
+   createUser(input: CreateUserInput!): User
+  }
 
   enum Nationality{
     USA
@@ -35,6 +45,7 @@ const typeDefs = gql`
     KOREA
     MEXICO
     VIETNAM
+    BRAZIL
     }
 `;
 

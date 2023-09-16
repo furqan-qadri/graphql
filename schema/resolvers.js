@@ -29,6 +29,20 @@ const resolvers = {
                 MovieList, (movie) => movie.year <=2000);
         },
     },
+
+    Mutation:{
+        createUser: (parent,args) => {
+            const user =args.input;
+            //DFDS
+            console.log(user);
+            // adding user to list
+            const lastId= UserList[UserList.length-1].id;
+            user.id= lastId+1;
+            UserList.push(user);
+            return user;
+
+        }
+    }
   };
 
 module.exports ={resolvers}
